@@ -1,0 +1,13 @@
+{
+  "extends": "@stracker/heft-node-rig/profiles/web-lib/config/jest.config.json",
+  "collectCoverageFrom": [
+    "lib-commonjs/**/*.js",
+    "!lib-commonjs/**/*.d.ts",
+    "!lib-commonjs/**/*.test.js",
+    "!lib-commonjs/**/tests/**",
+    "!lib-commonjs/**/__tests__/**",
+    "!lib-commonjs/**/__fixtures__/**",
+    "!lib-commonjs/**/__mocks__/**",
+    "!lib-commonjs/paraglide/**"
+  ]
+}

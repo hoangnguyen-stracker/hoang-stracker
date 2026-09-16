@@ -1,0 +1,40 @@
+{
+  "name": "@stracker/360-shared-translation",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "@stracker/__dev": "./src/index.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "@stracker/__dev": "./src/index.ts",
+        "default": "./lib-commonjs/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "_phase:build": "npm run gen && heft run --only build -- --clean && node scripts/fix-lib-commonjs-messages-type.js",
+    "_phase:test": "heft test",
+    "build": "npm run gen && heft build --clean && node scripts/fix-lib-commonjs-messages-type.js",
+    "gen": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide --strategy globalVariable localStorage baseLocale --emit-ts-declarations --no-emit-git-ignore",
+    "test": "npm run gen && heft test"
+  },
+  "devDependencies": {
+    "@inlang/paraglide-js": "~2.25.0",
+    "@rushstack/eslint-config": "4.6.4",
+    "@rushstack/heft": "1.2.17",
+    "@rushstack/heft-jest-plugin": "2.0.6",
+    "@stracker/heft-node-rig": "workspace:*",
+    "@types/heft-jest": "~1.0.6",
+    "@types/node": "^24.1.0",
+    "eslint": "^10.3.0",
+    "eslint-plugin-perfectionist": "~5.9.0"
+  }
+}

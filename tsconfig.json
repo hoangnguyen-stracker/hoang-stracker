@@ -1,0 +1,11 @@
+{
+  "extends": "./node_modules/@stracker/heft-node-rig/profiles/web-lib/tsconfig-base.json",
+  "compilerOptions": {
+    // The paraglide-js compiler emits plain JS (with matching .d.ts) directly into
+    // src/paraglide, committed to git like this repo's other generated code (see README).
+    // allowJs lets Heft's normal dual ESM+CJS build pick those files up like any other
+    // source file instead of needing a separate copy/transpile step.
+    "allowJs": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js"]
+}

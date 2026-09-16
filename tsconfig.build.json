@@ -1,0 +1,7 @@
+{
+  "extends": "./node_modules/@stracker/heft-node-rig/profiles/web-lib/tsconfig-base.json",
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.js"]
+}
