@@ -40,3 +40,4 @@ setLocale('fr', { reload: false });
 Install the [Sherlock VS Code extension](https://marketplace.visualstudio.com/items?itemName=inlang.vs-code-extension)
 (recommended in this repo's `.vscode/extensions.json`) for inline message previews and
 extraction while editing code that calls `m.*`.
+
