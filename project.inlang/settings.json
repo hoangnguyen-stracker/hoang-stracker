@@ -5,12 +5,9 @@
   "sourceLanguageTag": "en",
   "languageTags": ["en", "fr"],
   "modules": [
-    "https://cdn.jsdelivr.net/npm/@inlang/plugin-message-format@3/dist/index.js",
-    "https://cdn.jsdelivr.net/npm/@inlang/plugin-m-function-matcher@2/dist/index.js",
-    "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-empty-pattern@1/dist/index.js",
-    "https://cdn.jsdelivr.net/npm/@inlang/message-lint-rule-missing-translation@1/dist/index.js"
+    "https://cdn.jsdelivr.net/npm/@inlang/plugin-i18next@6/dist/index.js"
   ],
-  "plugin.inlang.messageFormat": {
+  "plugin.inlang.i18next": {
     "pathPattern": "./messages/{locale}.json"
   }
 }
